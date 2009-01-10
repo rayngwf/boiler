@@ -4,3 +4,6 @@
 [submodule "vendor/plugins/limerick_rake"]
 	path = vendor/plugins/limerick_rake
 	url = git://github.com/thoughtbot/limerick_rake.git
+[submodule "vendor/plugins/ar-backup"]
+	path = vendor/plugins/ar-backup
+	url = git://github.com/mattetti/ar-backup.git
