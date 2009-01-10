@@ -2,7 +2,7 @@
 #	Application
 #############################################################
 
-set :application, "bort"
+set :application, "boiler"
 set :deploy_to, "/path/to/deploy"
 
 #############################################################
@@ -19,7 +19,7 @@ set :rails_env, "staging"
 #	Servers
 #############################################################
 
-set :user, "bort"
+set :user, "boiler"
 set :domain, "www.example.com"
 server domain, :app, :web
 role :db, domain, :primary => true
@@ -30,9 +30,9 @@ role :db, domain, :primary => true
 
 set :scm, :git
 set :branch, "master"
-set :scm_user, 'bort'
+set :scm_user, 'boiler'
 set :scm_passphrase, "PASSWORD"
-set :repository, "git@github.com:FudgeStudios/bort.git"
+set :repository, "git@github.com:vertis/boiler.git"
 set :deploy_via, :remote_cache
 
 #############################################################
@@ -48,7 +48,7 @@ namespace :deploy do
       encoding: utf8
       username: root
       password: 
-      database: bort_staging
+      database: boiler_staging
       host: localhost
     EOF
     

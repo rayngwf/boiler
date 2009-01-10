@@ -1,23 +1,19 @@
-!http://clients.fudgestudios.com/chester.jpg!
+h1. Boiler
 
-h1. Bort
-
-Bort is a base Rails 2.2 application that makes creating new projects easier and faster. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com
-
-If you have any suggestions for improvements then feel free to leave a request on "User Voice":http://bort.uservoice.com
+Boiler is a base Rails 2.2 application originally copied from Bort. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com. Boiler is currently developed and maintained by "Vertis":http://www.coreguardian.org.
 
 h2. Install
 
-* Download and unzip Bort
+* Download and unzip Boiler
 * Edit the database.yml and the settings.yml files
-* Changed the default password in the bort migration
+* Changed the default password in the boiler migration
 * Edit the REST_AUTH_SITE_KEY in each of the environment files
 * Rake db:migrate
-* Have a brew and celebrate
+* Say thanks to the bort guys
 
 h2. Plugins Installed
 
-Bort comes with a few commonly used plugins installed and already setup.
+Bort came with quite a few plugins to get you off to a strong start. Boiler has taken the majority of these plugins and added a few. The most notible change is that Boiler is set to use  Hoptoad rather than Exception Notifier
 
 h3. RESTful Authentication
 
@@ -44,10 +40,10 @@ h3. Rspec & Rspec-rails
 You should be testing your code, so Bort comes with Rspec and Rspec-rails already installed so you're
 ready to roll.
 
-h3. Exception Notifier
+h3. Hoptoad Notifier
 
-You don't want your applications to crash and burn so Exception Notifier is already installed to let 
-you know when everything goes to shit.
+You don't want your applications to crash and burn so Hoptoad Notifier is already installed to let 
+you know when everything goes to shit. Be sure to set your key in 'config/initializers/hoptoad.rb
 
 h3. Asset Packager
 
@@ -70,15 +66,22 @@ over easily.
 
 h2. Capistrano Recipe
 
-Bort comes ready to rock capistrano. The recipe that is setup is based on using git and passenger. It's ready
+Boiler comes ready to rock capistrano. The recipe that is setup is based on using git and passenger. It's ready
 to go with multistage deployments. It deploys to the production config by default, so if you don't need it
 you can ignore it. Just update config/deploy/production.rb with your deployment settings.
 
 More info on capistrano-ext/multistage deployments can be found here: http://weblog.jamisbuck.org/2007/7/23/capistrano-multistage
 
+*NOTE* The is a known issue between rails 2.2.2 and capistrano-ext that will stop 'rake gems' from working properly. You can either
+download the patch or wait till rails 2.2.3 comes out.
+
+h2. Additional Rake Tasks
+
+Boiler comes with additional rake tasks to help you get started 
+
 h2. Uses the Database for Sessions
 
-Bort is setup to use the database to store sessions by default. 
+Boiler (like Bort) is setup to use the database to store sessions by default. 
 
 h2. Misc 
 
