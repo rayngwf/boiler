@@ -24,12 +24,12 @@ The AASM plugin comes pre-installed. RESTful Authentication is also setup to use
 
 h3. User Roles
 
-Bort now comes with "Role Requirement":http://code.google.com/p/rolerequirement/ by Tim Harper. A default 
+User roles are provided by "Role Requirement":http://code.google.com/p/rolerequirement/ by Tim Harper. A default
 admin role is predefined along with a default admin user. See the migrations for the admin login details.
 
 h3. Open ID Authentication
 
-Bort, as of 0.3, has Open ID integrated with RESTful Authentication. Rejoice!
+Boiler has Open ID integrated with RESTful Authentication. Clearly this is because its parent Bort also had it.
 
 h3. Will Paginate
 
@@ -37,7 +37,7 @@ We use will_paginate in pretty much every project we use, so Boiler comes with i
 
 h3. Rspec & Rspec-rails
 
-You should be testing your code, so Bort comes with Rspec and Rspec-rails already installed so you're
+You should be testing your code, so Boiler comes with Rspec and Rspec-rails already installed so you're
 ready to roll.
 
 h3. Hoptoad Notifier
