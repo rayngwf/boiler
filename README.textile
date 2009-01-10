@@ -33,7 +33,7 @@ Bort, as of 0.3, has Open ID integrated with RESTful Authentication. Rejoice!
 
 h3. Will Paginate
 
-We use will_paginate in pretty much every project we use, so Bort comes with it pre-installed.
+We use will_paginate in pretty much every project we use, so Boiler comes with it pre-installed.
 
 h3. Rspec & Rspec-rails
 
@@ -49,6 +49,10 @@ h3. Asset Packager
 
 Packages up your css/javascript so you're not sending 143 files down to the user at the same time. Reduces
 load times and saves you bandwidth.
+
+h3. Paperclip
+
+Paperclip has been added for all you attaching needs
 
 h2. Routes
 
@@ -77,7 +81,8 @@ download the patch or wait till rails 2.2.3 comes out.
 
 h2. Additional Rake Tasks
 
-Boiler comes with additional rake tasks to help you get started 
+Boiler comes with additional rake tasks to help you get started. The Limerick Rake plugin from the crowd at "ThoughtBot:http://www.thoughtbot.com has
+been included, as has ar-backup - to help you backup and move your databases.
 
 h2. Uses the Database for Sessions
 
@@ -86,7 +91,7 @@ Boiler (like Bort) is setup to use the database to store sessions by default.
 h2. Misc 
 
 * password and password_confirmation are set up to be filtered
-* there is a default application layout file
+* there is a default application layout file (This has been improved to be more friendly till it can be replaced)
 * a page title helper has been added
 * index.html is already deleted
 * rails.png is already deleted
