@@ -52,7 +52,7 @@ load times and saves you bandwidth.
 
 h3. Paperclip
 
-Paperclip has been added for all you attaching needs
+Paperclip has been added for all your attaching needs
 
 h2. Routes
 
