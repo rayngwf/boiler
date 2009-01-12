@@ -13,6 +13,13 @@ vendor/plugins/ar-backup:
   revision: 3f019644a9de66b4fe1f3914757db4c9d650b496
   branch: master
   remote: braid/vendor/plugins/ar-backup
+vendor/plugins/facebooker: 
+  squashed: true
+  url: git://github.com/mmangino/facebooker.git
+  type: git
+  revision: 1a0d3d96fefabd9ae64ab10cce6ac8708712c013
+  branch: master
+  remote: braid/vendor/plugins/facebooker
 vendor/plugins/jrails: 
   squashed: true
   url: git://github.com/aaronchi/jrails.git
