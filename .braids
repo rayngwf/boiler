@@ -41,3 +41,10 @@ vendor/gems/haml-1:
   revision: a84a6aaf3ea3258e690e4d21fdc51a74dbfe3d10
   branch: master
   remote: braid/vendor/gems/haml-1
+vendor/plugins/paperclip: 
+  squashed: true
+  url: git://github.com/thoughtbot/paperclip.git
+  type: git
+  revision: 5ec90a563e8652d8d4030b30b3bd1176b977af35
+  branch: master
+  remote: braid/vendor/plugins/paperclip
