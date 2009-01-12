@@ -1,12 +1,11 @@
---- 
-javascripts: 
-- base: 
-  - prototype
-  - effects
-  - dragdrop
-  - controls
-  - application
-stylesheets: 
+---
+javascripts:
 - base:
-  - base
-
+  - jquery
+  - jrails
+  - application
+stylesheets:
+- screen:
+  - screen
+- ie:
+  - ie
