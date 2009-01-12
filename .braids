@@ -6,6 +6,13 @@ vendor/gems/chriseppstein-compass-1:
   revision: 98035eea073dd233b3ad4925d13eef6f7a2c2ea8
   branch: master
   remote: braid/vendor/gems/chriseppstein-compass-1
+vendor/plugins/limerick_rake: 
+  squashed: true
+  url: git://github.com/thoughtbot/limerick_rake.git
+  type: git
+  revision: 8b44a7fd2520b80864c03344c8e33c055a95e634
+  branch: master
+  remote: braid/vendor/plugins/limerick-rake
 vendor/plugins/ar-backup: 
   squashed: true
   url: git://github.com/mattetti/ar-backup.git
