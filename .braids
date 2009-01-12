@@ -1,0 +1,8 @@
+--- 
+vendor/gems/haml-1: 
+  squashed: true
+  url: git://github.com/nex3/haml.git
+  type: git
+  revision: a84a6aaf3ea3258e690e4d21fdc51a74dbfe3d10
+  branch: master
+  remote: braid/vendor/gems/haml-1
