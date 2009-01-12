@@ -48,3 +48,10 @@ vendor/plugins/paperclip:
   revision: 5ec90a563e8652d8d4030b30b3bd1176b977af35
   branch: master
   remote: braid/vendor/plugins/paperclip
+vendor/plugins/asset_packager: 
+  squashed: true
+  url: git://github.com/sbecker/asset_packager.git
+  type: git
+  revision: e6a0303aeeb87ad6269ac01bc7dfd53d1ae9964a
+  branch: master
+  remote: braid/vendor/plugins/asset-packager
