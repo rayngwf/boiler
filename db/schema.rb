@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090110053006) do
+ActiveRecord::Schema.define(:version => 20080929171348) do
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
@@ -71,12 +71,5 @@ ActiveRecord::Schema.define(:version => 20090110053006) do
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
-
-  create_table "widgets", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
 end
