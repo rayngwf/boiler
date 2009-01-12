@@ -1,4 +1,11 @@
 --- 
+vendor/gems/chriseppstein-compass-1: 
+  squashed: true
+  url: git://github.com/chriseppstein/compass.git
+  type: git
+  revision: 98035eea073dd233b3ad4925d13eef6f7a2c2ea8
+  branch: master
+  remote: braid/vendor/gems/chriseppstein-compass-1
 vendor/gems/haml-1: 
   squashed: true
   url: git://github.com/nex3/haml.git

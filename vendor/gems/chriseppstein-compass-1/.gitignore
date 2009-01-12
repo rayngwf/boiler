@@ -1,0 +1,8 @@
+*.DS_Store
+tmp/*
+built_examples/*
+test/tmp
+test/fixtures/stylesheets/*/tmp
+test/fixtures/stylesheets/*/saved
+test/fixtures/stylesheets/empty
+pkg/*
