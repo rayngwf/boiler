@@ -13,6 +13,13 @@ vendor/plugins/ar-backup:
   revision: 3f019644a9de66b4fe1f3914757db4c9d650b496
   branch: master
   remote: braid/vendor/plugins/ar-backup
+vendor/plugins/jrails: 
+  squashed: true
+  url: git://github.com/aaronchi/jrails.git
+  type: git
+  revision: d367aac93b47fa4e4cacb8da02c1cf438806cca5
+  branch: master
+  remote: braid/vendor/plugins/jrails
 vendor/gems/haml-1: 
   squashed: true
   url: git://github.com/nex3/haml.git
