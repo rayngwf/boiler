@@ -1,5 +1,5 @@
 module UsersHelper
-  
+
   #
   # Use this to wrap view elements that the user can't access.
   # !! Note: this is an *interface*, not *security* feature !!
@@ -8,7 +8,7 @@ module UsersHelper
   # Example:
   # <%= if_authorized?(:index,   User)  do link_to('List all users', users_path) end %> |
   # <%= if_authorized?(:edit,    @user) do link_to('Edit this user', edit_user_path) end %> |
-  # <%= if_authorized?(:destroy, @user) do link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete end %> 
+  # <%= if_authorized?(:destroy, @user) do link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete end %>
   #
   #
   def if_authorized?(action, resource, &block)
@@ -23,7 +23,7 @@ module UsersHelper
   # By default, their login is used as link text and link title (tooltip)
   #
   # Takes options
-  # * :content_text => 'Content text in place of user.login', escaped with
+  # * :content_text => 'Content text in place of user.name', escaped with
   #   the standard h() function.
   # * :content_method => :user_instance_method_to_call_for_content_text
   # * :title_method => :user_instance_method_to_call_for_title_attribute
@@ -35,7 +35,7 @@ module UsersHelper
   #
   #   # if you've added a .name attribute:
   #  content_tag :span, :class => :vcard do
-  #    (link_to_user user, :class => 'fn n', :title_method => :login, :content_method => :name) +
+  #    (link_to_user user, :class => 'fn n', :title_method => :name, :content_method => :name) +
   #          ': ' + (content_tag :span, user.email, :class => 'email')
   #   end
   #   # => <span class="vcard"><a href="/users/3" title="barmy" class="fn n">Cyril Fotheringay-Phipps</a>: <span class="email">barmy@blandings.com</span></span>
@@ -45,7 +45,7 @@ module UsersHelper
   #
   def link_to_user(user, options={})
     raise "Invalid user" unless user
-    options.reverse_merge! :content_method => :login, :title_method => :login, :class => :nickname
+    options.reverse_merge! :content_method => :name, :title_method => :name, :class => :nickname
     content_text      = options.delete(:content_text)
     content_text    ||= user.send(options.delete(:content_method))
     options[:title] ||= user.send(options.delete(:title_method))
@@ -55,7 +55,7 @@ module UsersHelper
   #
   # Link to login page using remote ip address as link content
   #
-  # The :title (and thus, tooltip) is set to the IP address 
+  # The :title (and thus, tooltip) is set to the IP address
   #
   # Examples:
   #   link_to_login_with_IP
@@ -85,7 +85,7 @@ module UsersHelper
     else
       content_text = options.delete(:content_text) || 'not signed in'
       # kill ignored options from link_to_user
-      [:content_method, :title_method].each{|opt| options.delete(opt)} 
+      [:content_method, :title_method].each{|opt| options.delete(opt)}
       link_to_login_with_IP content_text, options
     end
   end

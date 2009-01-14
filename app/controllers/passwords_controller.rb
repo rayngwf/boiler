@@ -5,8 +5,8 @@ class PasswordsController < ApplicationController
 
   def create
     @password = Password.new(params[:password])
-    @password.user = User.find_by_email(@password.email)
-    
+    @password.user = User.find_by_email_hash(User.hash_email(@password.email))
+
     if @password.save
       PasswordMailer.deliver_forgot_password(@password)
       flash[:notice] = "A link to change your password has been sent to #{@password.email}."
@@ -22,12 +22,12 @@ class PasswordsController < ApplicationController
     rescue
       flash[:notice] = 'The change password URL you visited is either invalid or expired.'
       redirect_to new_password_path
-    end    
+    end
   end
 
   def update_after_forgetting
     @user = Password.find_by_reset_code(params[:reset_code]).user
-    
+
     if @user.update_attributes(params[:user])
       flash[:notice] = 'Password was successfully updated.'
       redirect_to login_path
@@ -36,7 +36,7 @@ class PasswordsController < ApplicationController
       redirect_to :action => :reset, :reset_code => params[:reset_code]
     end
   end
-  
+
   def update
     @password = Password.find(params[:id])
 

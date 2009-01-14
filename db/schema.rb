@@ -54,10 +54,10 @@ ActiveRecord::Schema.define(:version => 20080929171348) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "users", :force => true do |t|
-    t.string   "login",                     :limit => 40
+    t.string   "email",                     :limit => 100
+    t.string   "email_hash",                :limit => 64
     t.string   "identity_url"
     t.string   "name",                      :limit => 100, :default => ""
-    t.string   "email",                     :limit => 100
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.string   "remember_token",            :limit => 40
@@ -70,6 +70,6 @@ ActiveRecord::Schema.define(:version => 20080929171348) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+  add_index "users", ["email_hash"], :name => "index_users_on_email_hash", :unique => true
 
 end
