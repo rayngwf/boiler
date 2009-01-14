@@ -1,7 +1,7 @@
 !!! Strict
-%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml", "xmlns:fb" => "http://www.facebook.com/2008/fbml" }
   %head
-    %title= @page_title || APP_CONFIG[:site_name]
+    %title&== #{yield(:title) || t('layout.untitled')} - #{APP_CONFIG[:site_name]}
     %meta{ :content => "text/xhtml; charset=utf-8", "http-equiv" => "content-type" }
     %meta{ :content => "no", "http-equiv" => "imagetoolbar" }
     %meta{ :name => "distribution", :content => "all" }
@@ -16,12 +16,7 @@
     .container.box
       #header.span-24
         %p#top_info
-          - if logged_in?
-            = link_to 'Logout', logout_path
-          - else
-            = link_to 'Login', login_path
-            or
-            = link_to 'Signup', signup_path
+          = render :partial => "users/user_bar"
         #logo
           %h1
             = APP_CONFIG[:site_name]

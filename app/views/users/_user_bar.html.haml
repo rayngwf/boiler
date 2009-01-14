@@ -1,0 +1,8 @@
+- if logged_in?
+  == #{t('user.welcome')}, #{link_to_current_user :content_method => :name}
+  |
+  = link_to t('session.logout'), logout_path
+- else
+  = t('user.not_logged_in')
+  |
+  = link_to t('session.login_or_signup'), login_path

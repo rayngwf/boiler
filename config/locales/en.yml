@@ -1,0 +1,16 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  layout:
+    untitled: "Untitled"
+
+  session:
+    login: "Login"
+    logout: "Logout"
+    login_or_signup: "Log in or sign up"
+    login_with_facebook: "Login with Facebook"
+
+  user:
+    welcome: "Welcome"
+    not_logged_in: "Hello, Guest"

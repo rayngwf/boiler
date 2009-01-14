@@ -1,15 +1,5 @@
 class BoilerMigration < ActiveRecord::Migration
   def self.up
-    # Create Sessions Table
-    create_table :sessions do |t|
-      t.string :session_id, :null => false
-      t.text :data
-      t.timestamps
-    end
-
-    add_index :sessions, :session_id
-    add_index :sessions, :updated_at
-
     # Create OpenID Tables
     create_table :open_id_authentication_associations, :force => true do |t|
       t.integer :issued, :lifetime
@@ -79,7 +69,6 @@ class BoilerMigration < ActiveRecord::Migration
 
   def self.down
     # Drop all Boiler tables
-    drop_table :sessions
     drop_table :users
     drop_table :passwords
     drop_table :roles
