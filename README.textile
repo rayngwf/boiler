@@ -1,35 +1,33 @@
 h1. Boiler
 
-Boiler is a base Rails 2.2 application originally copied from Bort. Bort is developed and maintained by "Fudge Studios":http://www.fudgestudios.com, "Jim Neath":http://jimneath.org and "Matt Hall":http://matthall.wordpress.com. Boiler is currently developed and maintained by "Vertis":http://www.coreguardian.org.
+Boiler is a base "Rails 2.2":http://github.com/rails/rails/ application originally copied from Bort:http://github.com/fudgestudios/bort/tree/master.
 
 h2. Install
 
 * Download and unzip Boiler
-* Edit the database.yml and the settings.yml files
+* Create and edit config files database.yml, facebooker.yml, settings.yml, config/initializers/hoptoad.rb, initializers/site_keys.rb
 * Changed the default password in the boiler migration
-* Edit the REST_AUTH_SITE_KEY in each of the environment files
-* Rake db:migrate
+* rake db:migrate
 * Say thanks to the bort guys
 
 h2. Plugins Installed
 
-Bort came with quite a few plugins to get you off to a strong start. Boiler has taken the majority of these plugins and added a few. The most notible change is that Boiler is set to use  Hoptoad rather than Exception Notifier
+Bort came with quite a few plugins to get you off to a strong start. Boiler has taken the majority of these plugins and added a few. The most notible change is that Boiler is set to use Facebooker for Facebook Connect (instead of OpenID Authentication), Compass CSS Framework, HAML, jRails, YUI Compressor and Hoptoad Notifier (instead of Exception Notifier).
 
-h3. RESTful Authentication
+h3. Restful Authentication
 
-RESTful Authentication is already setup. The routes are setup, along with the mailers and observers.
-Forgotten password comes setup, so you don't have to mess around setting it up with every project.
+"Restful Authentication":http://github.com/technoweenie/restful-authentication/ is already setup. The routes are setup, along with the mailers and observers.
+"Forgotten password":http://github.com/greenisus/forgot_password/ comes setup, so you don't have to mess around setting it up with every project.
 
-The AASM plugin comes pre-installed. RESTful Authentication is also setup to use user activation.
+The "AASM plugin":http://github.com/rubyist/aasm/ comes pre-installed. Restful Authentication is also setup to use user activation.
 
 h3. User Roles
 
-User roles are provided by "Role Requirement":http://code.google.com/p/rolerequirement/ by Tim Harper. A default
-admin role is predefined along with a default admin user. See the migrations for the admin login details.
+User roles are provided by "Role Requirement":http://code.google.com/p/rolerequirement/ by Tim Harper. A default admin role is predefined along with a default admin user. See the migrations for the admin login details.
 
-h3. Open ID Authentication
+h3. Facebook Connect with Facebooker
 
-Boiler has Open ID integrated with RESTful Authentication. Clearly this is because its parent Bort also had it.
+Boiler has Open ID Authentication integrated with RESTful Authentication. But we decided to go with Facebook Connect with Facebooker.
 
 h3. Will Paginate
 
@@ -42,7 +40,7 @@ ready to roll.
 
 h3. Hoptoad Notifier
 
-You don't want your applications to crash and burn so Hoptoad Notifier is already installed to let 
+You don't want your applications to crash and burn so Hoptoad Notifier is already installed to let
 you know when everything goes to shit. Be sure to set your key in 'config/initializers/hoptoad.rb
 
 h3. Asset Packager
@@ -86,9 +84,9 @@ been included, as has ar-backup - to help you backup and move your databases.
 
 h2. Uses the Database for Sessions
 
-Boiler (like Bort) is setup to use the database to store sessions by default. 
+Boiler (like Bort) is setup to use the database to store sessions by default.
 
-h2. Misc 
+h2. Misc
 
 * password and password_confirmation are set up to be filtered
 * there is a default application layout file (This has been improved to be more friendly till it can be replaced)
@@ -100,4 +98,4 @@ h2. Misc
 
 h2. Credits
 
-Bort put together by people at "Fudge":http://www.fudgestudios.com/ 
+Bort put together by people at "Fudge":http://www.fudgestudios.com/

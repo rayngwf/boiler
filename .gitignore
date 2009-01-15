@@ -1,7 +1,10 @@
 .*
 !.gitignore
 !.braids
+config/database.yml
 config/facebooker.yml
+config/settings.yml
+config/initializers/hoptoad.rb
 config/initializers/site_keys.rb
 coverage
 db/*.sqlite3
